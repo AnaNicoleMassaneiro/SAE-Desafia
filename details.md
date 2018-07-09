@@ -1,8 +1,8 @@
 # Candidato
 
-**Nome**: Ronaldo Matos Rodrigues
+**Nome**: Ana Nicole Massaneiro
 
-**Email**: ronaldo.rodrigues@saedigital.com.br
+**Email**: ana.massaneiro@saedigital.com.br
 
 # Instalação
 [...]

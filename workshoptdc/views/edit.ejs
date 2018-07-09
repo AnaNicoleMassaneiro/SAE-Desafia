@@ -1,0 +1,36 @@
+<%- include ../header.ejs %>	
+		
+<% if (messages.error) { %>
+	<p style="color:red"><%- messages.error %></p>
+<% } %>
+
+<% if (messages.success) { %>
+	<p style="color:green"><%- messages.success %></p>
+<% } %>
+
+<form action="/espetaculos/edit/<%= id %>" method="post" name="form1">
+	<table width="25%" border="0">
+		<tr> 
+			<td>Nome do ESpetaculo</td>
+			<td><input type="text" name="name" id="name" value="<%= name %>" /></td>
+		</tr>
+		<tr> 
+			<td>Data Cadastro</td>
+			<td><input type="text" name="data_cadastro" value="<%= data_cadastro %>" /></td>
+		</tr>
+		<tr> 
+			<td>Data Apresentação</td>
+			<td><input type="text" name="data_apresentacao" value="<%= data_apresentacao %>" /></td>
+		</tr>
+		<tr> 
+			<td></td>
+			<td><input type="submit" name="Submit" value="Edit" /></td>
+		</tr>
+	</table>
+	<input type="hidden" name="_method" value="PUT" />
+</form>
+
+<!--
+incluindo conteúdo de rodapé que é comum para todas as páginas
+-->
+<%- include ../footer.ejs %>
