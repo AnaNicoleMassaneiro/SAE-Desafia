@@ -4,21 +4,23 @@
  */
 
 exports.list = function (req, res) {
-
     req.getConnection(function (err, connection) {
-
         var query = connection.query('SELECT * FROM espetaculo', function (err, rows) {
             if (err)
                 console.log("Error Selecting : %s ", err);
 
             res.render('customers', { page_title: "Show - SAE Desafia - Node.js", data: rows });
-
         });
-
         //console.log(query.sql);
     });
+};
+
+exports.hall = function (req, res) {
+  console.log('AAAAAAAAAAAAAAAAAAAAAAAAaa');
+    res.render('hall');
 
 };
+
 
 exports.add = function (req, res) {
     res.render('add_customer', { page_title: "Add Show - SAE Desafia - Node.js" });
@@ -58,9 +60,6 @@ exports.save = function (req, res) {
 
             res.redirect('/customers');
         });
-
-        // console.log(query.sql); get raw query
-
     });
 };
 
